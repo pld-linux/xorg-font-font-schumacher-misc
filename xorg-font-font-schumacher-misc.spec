@@ -1,12 +1,12 @@
 Summary:	schumacher-misc font
 Summary(pl):	Font schumacher-misc
 Name:		xorg-font-font-schumacher-misc
-Version:	0.99.2
+Version:	1.0.0
 Release:	0.1
-License:	MIT
+License:	distributable (see COPYING)
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-schumacher-misc-%{version}.tar.bz2
-# Source0-md5:	1493bc36bf4252ae1ad25c5e658419fb
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-schumacher-misc-%{version}.tar.bz2
+# Source0-md5:	f1c6063d2fadc57e696a0aab69afd6e0
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
