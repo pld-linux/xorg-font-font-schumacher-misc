@@ -1,5 +1,5 @@
 Summary:	schumacher-misc font
-Summary(pl.UTF-8):   Font schumacher-misc
+Summary(pl.UTF-8):	Font schumacher-misc
 Name:		xorg-font-font-schumacher-misc
 Version:	1.0.0
 Release:	0.1
