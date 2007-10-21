@@ -2,7 +2,7 @@ Summary:	Schumacher Clean bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe Schumacher Clean
 Name:		xorg-font-font-schumacher-misc
 Version:	1.0.0
-Release:	1
+Release:	2
 License:	distributable (see COPYING)
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-schumacher-misc-%{version}.tar.bz2
@@ -19,6 +19,7 @@ BuildRequires:	xorg-font-font-util >= 0.99.2
 BuildRequires:	xorg-util-util-macros
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/misc
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
