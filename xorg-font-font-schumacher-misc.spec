@@ -1,22 +1,24 @@
 Summary:	Schumacher Clean bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe Schumacher Clean
 Name:		xorg-font-font-schumacher-misc
-Version:	1.1.2
-Release:	2
+Version:	1.1.3
+Release:	1
 License:	distributable (see COPYING)
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/individual/font/font-schumacher-misc-%{version}.tar.bz2
-# Source0-md5:	e805feb7c4f20e6bfb1118d19d972219
-URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+Source0:	https://xorg.freedesktop.org/releases/individual/font/font-schumacher-misc-%{version}.tar.xz
+# Source0-md5:	660e0449cebc1296d28ce58174fe0a71
+URL:		https://xorg.freedesktop.org/
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	perl-base
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-font-font-util >= 1.2
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-font-font-util >= 1.4
+BuildRequires:	xorg-util-util-macros >= 1.20
+BuildRequires:	xz
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/misc
 BuildArch:	noarch
@@ -46,8 +48,10 @@ ISO-8859-15, ISO-8859-16 i KOI8-R.
 %{__autoconf}
 %{__automake}
 %configure \
+%if "%{_gnu}" != "-gnux32"
 	--build=%{_host} \
 	--host=%{_host} \
+%endif
 	--with-fontdir=%{_fontsdir}/misc
 
 %{__make}
@@ -69,5 +73,5 @@ fontpostinst misc
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %{_fontsdir}/misc/cl*.pcf.gz
